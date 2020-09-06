@@ -227,13 +227,13 @@ systembeepoff
 
 # Make zsh the default shell for the user.
 chsh -s /bin/zsh $name >/dev/null 2>&1
-sudo -u "$name" mkdir -p "/home/$name/.cache/zsh/"
+#sudo -u "$name" mkdir -p "/home/$name/.cache/zsh/"
 
 # dbus UUID must be generated for Artix runit.
-dbus-uuidgen > /var/lib/dbus/machine-id
+#dbus-uuidgen > /var/lib/dbus/machine-id
 
 # Start/restart PulseAudio.
-killall pulseaudio; sudo -u "$name" pulseaudio --start
+#killall pulseaudio; sudo -u "$name" pulseaudio --start
 
 # This line, overwriting the `newperms` command above will allow the user to run
 # serveral important commands, `shutdown`, `reboot`, updating, etc. without a password.
